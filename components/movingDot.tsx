@@ -1,6 +1,7 @@
 'use client'
 
 import { animated, useSpring } from '@react-spring/web'
+import { Button } from './ui/button'
 
 const MovingDot = () => {
 	const [springs, api] = useSpring(() => ({
@@ -19,10 +20,9 @@ const MovingDot = () => {
 	}
 
 	return (
-		<div>
-			<div className='flex-container'>
+		<div className='flex flex-col justify-between h-screen'>
+			<div className='flex items-center flex-grow'>
 				<animated.div
-					onClick={handleClick}
 					style={{
 						width: 80,
 						height: 80,
@@ -31,6 +31,11 @@ const MovingDot = () => {
 						...springs,
 					}}
 				/>
+			</div>
+			<div className='flex justify-center mb-4'>
+				<Button className='px-4 py-2 rounded' onClick={handleClick}>
+					Move Dot
+				</Button>
 			</div>
 		</div>
 	)
