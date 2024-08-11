@@ -2,8 +2,8 @@ import MovingDot from '@/components/movingDot'
 
 export default function Home() {
 	return (
-		<main className='flex items-center justify-center min-h-screen'>
+		<div className='flex relative w-screen h-screen items-center'>
 			<MovingDot />
-		</main>
+		</div>
 	)
 }
